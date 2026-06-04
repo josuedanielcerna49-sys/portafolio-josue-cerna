@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio - Josué Daniel Cerna Martinez</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./imagenes/josue.jpg" type="image/jpg">
+</head>
+<body>
+
+    <header id="encabezado">
+        <div id="info-encabezado">
+            <h1 id="titulo-principal">Josué Daniel Cerna Martinez</h1>
+            <p id="subtitulo">Estudiante de Informática | Practicante en Simplexity</p>
+        </div>
+
+        <div id="contenedor-logo">
+            <img id="logo" src="./imagenes/logo.png" alt="Logo de Josué Daniel Cerna Martinez">
+        </div>
+    </header>
+
+    <main id="contenido-principal">
+
+        <section id="sobre-mi" class="seccion">
+            <h2>Sobre mí</h2>
+
+            <img
+                id="foto-perfil"
+                src="./imagenes/josue.jpg"
+                alt="Foto de Josué Daniel Cerna Martinez">
+
+            <p>
+                Hola, mi nombre es Josué Daniel Cerna Martinez. Actualmente soy estudiante
+                de informática y estoy realizando mi práctica profesional
+                en Simplexity.
+            </p>
+
+            <p>
+                Me interesa el desarrollo web, la programación y la
+                inteligencia artificial.
+            </p>
+        </section>
+
+        <section id="habilidades" class="seccion">
+            <h2>Habilidades</h2>
+
+            <ul id="lista-habilidades">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Git y GitHub</li>
+                <li>Docker</li>
+                <li>Visual Studio Code</li>
+                <li>Inteligencia Artificial</li>
+            </ul>
+        </section>
+
+        <section id="educacion" class="seccion">
+            <h2>Educación</h2>
+
+            <h3>Instituto Privado Comayagua</h3>
+            <p>Bachillerato Técnico Profesional en Informática.</p>
+        </section>
+
+        <section id="proyectos" class="seccion">
+            <h2>Proyectos</h2>
+
+            <article class="tarjeta-proyecto">
+                <h3>Mi primer portafolio web</h3>
+                <p>
+                    Página web personal creada con HTML como parte
+                    de mi práctica profesional.
+                </p>
+            </article>
+
+            <article class="tarjeta-proyecto">
+                <h3>Aprendiendo Docker</h3>
+                <p>
+                    Configuración de un entorno local para ejecutar
+                    sitios web mediante contenedores.
+                </p>
+            </article>
+        </section>
+
+        <section id="contacto" class="seccion">
+            <h2>Redes y Contacto</h2>
+
+            <p>
+                GitHub:
+                <a href="https://github.com/" target="_blank">
+                    Ver mi perfil
+                </a>
+            </p>
+
+            <p>
+                Correo:
+                <a href="mailto:josue.estudiante@simplexityla.com">
+                    josue.estudiante@simplexityla.com
+                </a>
+            </p>
+        </section>
+
+    </main>
+
+    <footer id="pie-pagina">
+        <p>&copy; 2026 - Josué Daniel Cerna Martinez</p>
+        <p>Práctica Profesional IPC - Simplexity</p>
+    </footer>
+
+    <button
+        id="boton-chat"
+        type="button"
+        aria-label="Abrir chat sobre Josué"
+        aria-expanded="false">
+        Chat
+    </button>
+
+    <section id="ventana-chat" aria-label="Chat sobre Josué" hidden>
+        <header id="encabezado-chat">
+            <div>
+                <h2>Asistente de Josué</h2>
+                <p>Pregúntame sobre su perfil</p>
+            </div>
+
+            <button id="cerrar-chat" type="button" aria-label="Cerrar chat">
+                &times;
+            </button>
+        </header>
+
+        <div id="mensajes-chat" aria-live="polite"></div>
+
+        <div id="preguntas-rapidas">
+            <button type="button" data-pregunta="¿Quién eres?">Sobre mí</button>
+            <button type="button" data-pregunta="¿Cuáles son tus habilidades?">Habilidades</button>
+            <button type="button" data-pregunta="¿Qué proyectos tienes?">Proyectos</button>
+            <button type="button" data-pregunta="¿Cómo puedo contactarte?">Contacto</button>
+        </div>
+
+        <form id="formulario-chat">
+            <label class="solo-lectores" for="entrada-chat">Escribe tu pregunta</label>
+            <input
+                id="entrada-chat"
+                type="text"
+                placeholder="Escribe una pregunta..."
+                autocomplete="off"
+                required>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
