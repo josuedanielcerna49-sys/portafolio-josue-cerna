@@ -249,3 +249,16 @@ Durante esta actividad aprendí:
 ### Resultado
 
 Se agregó un chatbot funcional al portafolio personal capaz de responder preguntas básicas sobre mi perfil, habilidades, proyectos y datos de contacto.
+
+## Publicación del Portafolio
+
+El portafolio fue publicado utilizando GitHub Pages para que pueda accederse públicamente desde cualquier navegador.
+
+### URL del sitio
+https://josuedanielcerna49-sys.github.io/portafolio-josue-cerna/
+
+### Actividades realizadas
+- Configuración de GitHub Pages desde el repositorio.
+- Publicación de la rama principal (`main`).
+- Verificación de la carga correcta del sitio.
+- Comprobación del funcionamiento del chatbot en la versión publicada.

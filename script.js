@@ -41,7 +41,10 @@ function limpiarTexto(texto) {
     return texto
         .toLowerCase()
         .normalize("NFD")
-        .replace(/[\u0300-\u036f]/g, "");
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/[¿?¡!.,;:]/g, " ")
+        .replace(/\s+/g, " ")
+        .trim();
 }
 
 function obtenerRespuesta(pregunta) {
@@ -77,12 +80,27 @@ function obtenerRespuesta(pregunta) {
         return "Josué estudia en el Instituto Privado Comayagua.";
     }
 
-    if (
-        texto.includes("que estudias") ||
-        texto.includes("que estudia") ||
-        texto.includes("bachillerato") ||
-        texto.includes("educacion")
-    ) {
+    const frasesSobreEstudios = [
+        "que estudias",
+        "que estudia",
+        "que estas estudiando",
+        "que esta estudiando",
+        "que carrera",
+        "cual es tu carrera",
+        "cual es su carrera",
+        "cuales son tus estudios",
+        "cuales son sus estudios",
+        "area de estudio",
+        "estudios",
+        "carrera",
+        "formacion",
+        "formacion academica",
+        "especialidad",
+        "bachillerato",
+        "educacion"
+    ];
+
+    if (frasesSobreEstudios.some((frase) => texto.includes(frase))) {
         return "Josué estudia el Bachillerato Técnico Profesional en Informática.";
     }
 
@@ -141,6 +159,10 @@ function obtenerRespuesta(pregunta) {
         texto.includes("email")
     ) {
         return "Puedes contactar a Josué en josuedanielcerna49@gmail.com.";
+    }
+
+    if (texto.includes("como se llama la chi chi de josue")) {
+        return "Sofia";
     }
 
     if (texto.includes("quien") || texto.includes("sobre ti") || texto.includes("perfil")) {
